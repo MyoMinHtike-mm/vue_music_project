@@ -1,26 +1,50 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <NavPart></NavPart>
+    <GridPart></GridPart>
+    <FormPart></FormPart>
+    <TwocolPart></TwocolPart>
+    <FooterPart></FooterPart>
+  </div>
+
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
+
+
+<script>
+import NavPart from './components/NavPart.vue'
+import GridPart from './components/GridPart.vue'
+import FormPart from './components/FormPart.vue'
+import TwocolPart from './components/TwocolPart.vue'
+import FooterPart from './components/FooterPart.vue'
+
+
+export default{
   name: 'App',
+
+  data(){
+    return{
+      showModal : false
+    }
+  },
+
   components: {
-    HelloWorld
+    NavPart,
+    GridPart,
+    FormPart,
+    TwocolPart,
+    FooterPart,
+  },
+
+  methods: {
+    closeBox(){
+      console.log("ksdjf")
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
